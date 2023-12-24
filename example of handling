@@ -1,0 +1,19 @@
+function divide(a, b) {
+    try {
+        if (b === 0) {
+            throw 'Division by zero error';
+        }
+        return a / b;
+    } catch (error) {
+        console.error('Error:', error);
+        // You can handle the error here or rethrow it if needed
+        // throw error; // Rethrow the caught error
+    } finally {
+        console.log('Division operation completed');
+    }
+}
+
+// Example usage
+console.log(divide(10, 2));  // Output: 5
+console.log(divide(10, 0));  // Output: Error: Division by zero error
+                             //        Division operation completed
